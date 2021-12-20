@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <p>
+      開始点のX座標<input type="number" value=0 id="begin-x"><br>
+      開始点のY座標<input type="number" value=200 id="begin-y" max=320 min=-64><br>
+      開始点のZ座標<input type="number" value=0 id="begin-z"><br>
+      文字の大きさ<input type="number" value=25 id="height" max="384" min=0><br>
+
+    </p><br>
+    <p>
+      生成したい文字列<input type="text" id="input" value="リア充爆発しろ!">
+      <button id="run">生成</button><br>
+    </p>
+    <canvas id="canvas"></canvas><br>
+    <p id="use_blocks"></p>
+    <textarea id="command"></textarea><br>
+    <a id="download" download="main.mcfunction">ダウンロード</a>
+    <h1>ダウンロードしたファイルの使い方(JAVA版)</h1>
+    <h3>
+      詳しい説明は<a href="https://minecraft.fandom.com/ja/wiki/%E9%96%A2%E6%95%B0_(Java_Edition)">こちら</a>をご覧ください。また、統合版の人は<a href="https://minecraft.fandom.com/ja/wiki/%E9%96%A2%E6%95%B0_(Bedrock_Edition)">こちら</a>をご覧ください。
+    </h3>
+    <h2>1.ワールドフォルダを開く</h2>
+    <p>
+      Windowsは C:\Users\(ユーザー名)\AppData\Roaming\.minecraft\saves\(ワールド名)<br>
+      Mac OS Xは /Users/(ユーザー名)/Library/Application Support/minecraft/saves/(ワールド名)<br>
+      Linuxは /Users/(ユーザー名)/Library/minecraft/saves/(ワールド名)<br>
+      を開いてください。
+      (ワールド名は実行したいワールドの名前にしてください)
+    </p>
+    <h2>2.datapacksの中にフォルダを作る</h2>
+    <p>
+      新規作成したフォルダの名前はなんでもいいです。
+    </p>
+    <h2>3.作ったフォルダの中にdataフォルダとmcmetaファイルを作る</h2>
+    <p>
+      まず、作ったフォルダの中にdataという名前のフォルダとpack.mcmetaという名前のファイルを作ります。(pack.mcmetaを作るには、windowsならメモ帳で、macならテキストエディタで適当なファイルを作成し、名前をpack.mcmetaに変更します。)次に、pack.mcmetaを開き、中身を<br>
+      {"pack": "pack_format": 1,"description": "datapack"}}<br>
+      にします。
+    </p>
+    <h2>4.dataの中にmainフォルダを作る</h2>
+    <p></p>
+    <h2>5.mainフォルダの中にfunctionsフォルダを作る</h2>
+    <p></p>
+    <h2>6.functionsフォルダの中にダウンロードしたファイルを入れる</h2>
+    <p>ここまでできていれば下の画像のようになっているはずです</p>
+    <img src="img/img_1.png" width=500>
+    <h2>7.minecraftを起動して実行する</h2>
+    <p>
+      minecraftを起動して、ワールドを開き、/キーを押して、「function main:main」と入力してEnterキーを押してください。すると実行されます。(少し重くなるかもしれません)
+    </p>
+    <h1>注意</h1>
+    <ul>
+      <li>入力した文字数が多すぎると、処理が重くなります(処理落ちする可能性もあります)。多くても15文字くらいにしてください。</li>
+      <li>コマンドを実行するときは、描画距離を大きくしてください。描画距離が小さいと、うまく実行されないことがあります。</li>
+      <li>一度実行したら取り消せません。座標は慎重に入力してください。</li>
+    </ul>
+
+  </body>
+</html>
